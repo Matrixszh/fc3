@@ -9,7 +9,7 @@ function SliderHome() {
      //  slider
 
      useEffect(() => {
-    
+       if (typeof window !== "undefined") {
         const sliderthumbs = new Swiper('.gallery-thumbs', {
           spaceBetween: 10,
           centeredSlides: true,
@@ -33,8 +33,8 @@ function SliderHome() {
             }
           }
         });
-    
-    
+
+
         const slider = new Swiper('.gallery-top', {
           spaceBetween: 0,
           autoplay: {
@@ -55,10 +55,11 @@ function SliderHome() {
             swiper: sliderthumbs
           }
         });
-      
+
         // return () => {
         //   slider.destroy(); // Clean up Swiper instance on unmount
         // };
+       }
       }, []);
     
       //   background img for slider
