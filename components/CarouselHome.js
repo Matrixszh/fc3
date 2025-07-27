@@ -11,6 +11,9 @@ function CarouselHome() {
   //  Carousel
   useEffect(() => {
     if (typeof window !== "undefined") {
+      // register Swiper custom elements
+      register();
+
       const carouselSlider = new Swiper('.carousel-slider', {
         spaceBetween: 0,
         slidesPerView: 1,
