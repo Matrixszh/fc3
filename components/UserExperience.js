@@ -56,18 +56,18 @@ const UserExperience = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-5 wow" data-splitting>
-            <h3 className="section-title">HOW WE MAKE <br />
-              USER EXPERIENCES</h3>
-            <a href="mailto:hello@tourog.com">hello@tourog.com</a>
+            <h3 className="section-title">YOUR TRUSTED<br />
+              FIRE SAFETY PARTNER</h3>
+            <a href="mailto:contact@crossfire.com">contact@crossfire.com</a>
           </div>
           {/* end col-5 */}
           <div className="col-lg-7 wow" data-splitting>
-            <p>You cant use up creativity. The more you use, the 
-              more you have in your significant mind.</p>
-            <h6>Salvador Dali</h6>
-            <small>Digital Artist</small> <b>25</b>
+            <p>Fire protection engineering and consultants -
+              providing comprehensive fire safety solutions since 2000.</p>
+            <h6>Crossfire Team</h6>
+            <small>Fire Protection Engineers</small> <b>25+</b>
             <h4>YEARS OF<br />
-              DIGITAL EXPERIENCE</h4>
+              FIRE SAFETY EXPERIENCE</h4>
           </div>
           {/* end col-7 */}
         </div>
