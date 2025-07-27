@@ -97,8 +97,8 @@ const ThingsAbleToDo = () => {
             </a>
           </figure>
           <div className="caption wow" data-splitting>
-            <h3>Darkness Vehicle</h3>
-            <small>DIGITAL, PRINT, DEVELOPMENT</small>
+            <h3>Office Tower Complex</h3>
+            <small>FIRE SUPPRESSION, SPRINKLER SYSTEMS</small>
           </div>
           {/* end caption */}
         </li>
@@ -109,8 +109,8 @@ const ThingsAbleToDo = () => {
             </a>
           </figure>
           <div className="caption wow" data-splitting>
-            <h3>Goddes Cover Art</h3>
-            <small>PRINT, DIGITAL, DEVELOPMENT</small>
+            <h3>Industrial Warehouse</h3>
+            <small>FIRE DETECTION, ALARM SYSTEMS</small>
           </div>
           {/* end caption */}
         </li>
@@ -121,8 +121,8 @@ const ThingsAbleToDo = () => {
             </a>
           </figure>
           <div className="caption wow" data-splitting>
-            <h3>Hard Employee</h3>
-            <small>WEB, DIGITAL, DEVELOPMENT</small>
+            <h3>Hospital Fire Safety</h3>
+            <small>COMPREHENSIVE FIRE PROTECTION</small>
           </div>
           {/* end caption */}
         </li>
@@ -133,8 +133,8 @@ const ThingsAbleToDo = () => {
             </a>
           </figure>
           <div className="caption wow" data-splitting>
-            <h3>Sweet Berry Pie</h3>
-            <small>DIGITAL, PRINT, DEVELOPMENT</small>
+            <h3>School Safety Systems</h3>
+            <small>EMERGENCY PROTOCOLS, FIRE DRILLS</small>
           </div>
           {/* end caption */}
         </li>
@@ -145,8 +145,8 @@ const ThingsAbleToDo = () => {
             </a>
           </figure>
           <div className="caption wow" data-splitting>
-            <h3>King of Roosters</h3>
-            <small>PRINT, DIGITAL, DEVELOPMENT</small>
+            <h3>High-Rise Residential</h3>
+            <small>SPRINKLER DESIGN, CODE COMPLIANCE</small>
           </div>
           {/* end caption */}
         </li>
@@ -157,8 +157,8 @@ const ThingsAbleToDo = () => {
             </a>
           </figure>
           <div className="caption wow" data-splitting>
-            <h3>Primero Car</h3>
-            <small>WEB, DIGITAL, DEVELOPMENT</small>
+            <h3>Manufacturing Plant</h3>
+            <small>INDUSTRIAL FIRE PROTECTION</small>
           </div>
           {/* end caption */}
         </li>
