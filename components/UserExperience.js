@@ -87,7 +87,7 @@ const UserExperience = () => {
               <figure className="reveal-effect masker wow">
                 <img src="/assets/images/office01.jpg" alt="Image" />
                 <figcaption>
-                  <h6>HEADQUARTER OF TOUROG</h6>
+                  <h6>CROSSFIRE HEADQUARTERS</h6>
                 </figcaption>
               </figure>
             </div>
@@ -96,7 +96,7 @@ const UserExperience = () => {
               <figure className='reveal-effect masker wow'>
                 <img src="/assets/images/office02.jpg" alt="Image" />
                 <figcaption>
-                  <h6>TORONTO OFFICE</h6>
+                  <h6>FIRE SAFETY TRAINING CENTER</h6>
                 </figcaption>
               </figure>
             </div>
@@ -105,7 +105,7 @@ const UserExperience = () => {
               <figure className='reveal-effect masker wow'>
                 <img src="/assets/images/office03.jpg" alt="Image" />
                 <figcaption>
-                  <h6>HEADQUARTER OF TOUROG</h6>
+                  <h6>ENGINEERING LABORATORY</h6>
                 </figcaption>
               </figure>
             </div>
