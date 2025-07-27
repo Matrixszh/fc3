@@ -188,56 +188,22 @@ function Navbar({ children }) {
             <ul data-splitting>
               <li>
                 <Link href="/home">HOME</Link>
-                <i
-                  className="fas fa-caret-down"
-                  onClick={handleTreeMenuClick}
-                ></i>
                 <small>First page</small>
-                <ul style={{ height: "0px", overflow: "hidden", transition: "height 0.3s ease", display: 'block' }}>
-                  <li>
-                    <Link href="/home">HOME SLIDER</Link>
-                  </li>
-                  <li>
-                    <a href="index-video.html">HOME VIDEO</a>
-                  </li>
-                  <li>
-                    <Link href="/home-carousel" scroll={false} >HOME CAROUSEL</Link>
-                  </li>
-                </ul>
+
               </li>
               <li>
-                <a href="studio.html">STUDIO</a> <small>All About Us</small>
+                <a href="/aboutUs">About Us</a> <small>All About Us</small>
               </li>
               <li>
-                <Link href="/home-carousel">SERVICES</Link>
-                <i
-                  className="fas fa-caret-down"
-                  onClick={handleTreeMenuClick}
-                ></i>
+                <Link href="/Services/Services3">SERVICES</Link>
                 <small>Services we provide</small>
-                <ul style={{ height: "auto", overflow: "hidden", transition: "height 0.3s ease", display: 'block' }}>
-                  <li>
-                    <Link href="/Services/Services3">CREATING EXPERIENCES</Link>
-                  </li>
-                  <li>
-                    <a href="/Services/Services2">PROMOTING YOUR BRAND</a>
-                  </li>
-                  <li>
-                    <Link href="/Services/Services1" >FROM BASE TO CONSISTENT</Link>
-                  </li>
-                  <li>
-                    <Link href="/Services/Services4">THROUGH THE LENS</Link>
-                  </li>
-                </ul>
+
               </li>
               <li>
-                <a href="blog.html">BLOG</a> <small>Recent posts</small>
+                <a href="/gallery">Gallery</a> <small>Our Activities</small>
               </li>
               <li>
                 <Link href="/contactUs">CONTACT</Link> <small>Say hello</small>
-              </li>
-              <li>
-                <Link href="/login">LogIn/SignUp</Link> <small>Make account</small>
               </li>
             </ul>
           </div>
@@ -323,7 +289,7 @@ function Navbar({ children }) {
           <aside className="left-side">
             <div className="logo">
               <a href="/home">
-                <img src="/assets/images/logo.png" alt="Image" style={{ width: '150px', height: 'auto' }} />
+                <img src="/assets/images/logocf.png" alt="Image" style={{ width: '150px', height: 'auto' }} />
               </a>
             </div>
             {/* end logo */}
