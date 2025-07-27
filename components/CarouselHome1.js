@@ -45,14 +45,16 @@ function CarouselHome() {
       }
     });
   
-    // Set background images
-    const pageSections = document.querySelectorAll(".swiper-slide");
-    pageSections.forEach(slide => {
-      const backgroundUrl = slide.getAttribute("data-background");
-      if (backgroundUrl) {
-        slide.style.backgroundImage = `url(${backgroundUrl})`;
-      }
-    });
+    // Set background images - only run on client side
+    if (typeof window !== "undefined") {
+      const pageSections = document.querySelectorAll(".swiper-slide");
+      pageSections.forEach(slide => {
+        const backgroundUrl = slide.getAttribute("data-background");
+        if (backgroundUrl) {
+          slide.style.backgroundImage = `url(${backgroundUrl})`;
+        }
+      });
+    }
   }, []);
   
 
