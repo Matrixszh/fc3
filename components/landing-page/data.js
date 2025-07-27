@@ -445,44 +445,23 @@ export const demoMenus = [
 
 export const menus = [
   {
-    title: "Elements",
-    href: "#elements",
+    title: "Home",
+    href: "/home",
   },
   {
-    title: "Why Dash Tail",
-    href: "#whyDashTail",
+    title: "About",
+    href: "/about",
   },
   {
-    title: "Pricing",
-    href: "#pricing",
+    title: "Services",
+    href: "/services",
   },
   {
-    title: "More",
-    child: [
-      {
-        title: "Documentation",
-        href: "/docs/introduction",
-      },
-      {
-        title: "Changelog",
-        href: "/docs/update-log",
-      },
-      {
-        title: "Github Access",
-        href: "https://codeshaperbd.freshdesk.com/support/login",
-      },
-      {
-        title: "Report a bug",
-        href: "https://codeshaperbd.freshdesk.com/support/login",
-      },
-      {
-        title: "Support",
-        href: "https://codeshaperbd.freshdesk.com/support/login",
-      },
-      {
-        title: "Hire Us",
-        href: "https://codeshaper.net/",
-      },
-    ],
+    title: "Gallery",
+    href: "/gallery",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
   },
 ];
