@@ -245,7 +245,7 @@ function Page() {
                         src="/assets/images/slider/slide-2.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-2-p-500.jpeg 500w,
                         /assets/images/slider/slide-2-p-800.jpeg 800w,
                         /assets/images/slider/slide-2.jpg        934w
