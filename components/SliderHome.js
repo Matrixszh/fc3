@@ -3,14 +3,15 @@ import React, { useEffect } from 'react'
 import Swiper from "swiper";
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-register();
 
 function SliderHome() {
      //  slider
 
      useEffect(() => {
        if (typeof window !== "undefined") {
+        // register Swiper custom elements
+        register();
+
         const sliderthumbs = new Swiper('.gallery-thumbs', {
           spaceBetween: 10,
           centeredSlides: true,
