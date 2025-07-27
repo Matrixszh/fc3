@@ -1,24 +1,12 @@
-"use client"
+"use client";
 
-import Navbar from "../../components/Navbar";
-import SliderHome from "../../components/SliderHome";
-import UserExperience from "../../components/UserExperience";
-import ThingsAbleToDo from "../../components/ThingsAbleToDo";
-import Partner from "../../components/Partner";
-import Footer from "../../components/Footer";
+import dynamic from 'next/dynamic';
 
+const HomeComponent = dynamic(() => import('./HomeComponent'), { 
+  ssr: false,
+  loading: () => <div>Loading...</div>
+});
 
-
-export default function Home() {
-  return (
-    <>
-  <Navbar>
-    <SliderHome/>
-  </Navbar>
-  <UserExperience/>
-  <ThingsAbleToDo/>
-  <Partner/>
-  <Footer/>
-    </>
-  );
+export default function HomePage() {
+  return <HomeComponent />;
 }
