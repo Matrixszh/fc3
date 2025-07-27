@@ -1,24 +1,12 @@
-"use client"
+"use client";
 
-import Navbar from "../../../components/Navbar";
-import CarouselHome3 from "../../../components/CarouselHome3";
-import UserExperience from "../../../components/UserExperience";
-import ThingsAbleToDo from "../../../components/ThingsAbleToDo";
-import Partner from "../../../components/Partner";
-import Footer from "../../../components/Footer";
+import dynamic from 'next/dynamic';
 
+const Services3Component = dynamic(() => import('./Services3Component'), { 
+  ssr: false,
+  loading: () => <div>Loading...</div>
+});
 
-
-export default function Home() {
-  return (
-    <>
-  <Navbar>
-    <CarouselHome3/>
-  </Navbar>
-  <UserExperience/>
-  <ThingsAbleToDo/>
-  <Partner/>
-  <Footer/>
-    </>
-  );
+export default function Services3Page() {
+  return <Services3Component />;
 }

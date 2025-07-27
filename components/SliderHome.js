@@ -1,15 +1,17 @@
+"use client";
 import React, { useEffect } from 'react'
 import Swiper from "swiper";
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-register();
 
 function SliderHome() {
      //  slider
 
      useEffect(() => {
-    
+       if (typeof window !== "undefined") {
+        // register Swiper custom elements
+        register();
+
         const sliderthumbs = new Swiper('.gallery-thumbs', {
           spaceBetween: 10,
           centeredSlides: true,
@@ -33,8 +35,8 @@ function SliderHome() {
             }
           }
         });
-    
-    
+
+
         const slider = new Swiper('.gallery-top', {
           spaceBetween: 0,
           autoplay: {
@@ -55,23 +57,26 @@ function SliderHome() {
             swiper: sliderthumbs
           }
         });
-      
+
         // return () => {
         //   slider.destroy(); // Clean up Swiper instance on unmount
         // };
+       }
       }, []);
     
       //   background img for slider
-    useEffect(() => {
-      // Background image setup
-      const pageSections = document.querySelectorAll(".swiper-slide");
-      pageSections.forEach(slide => {
-        const backgroundUrl = slide.getAttribute("data-background");
-        if (backgroundUrl) {
-          slide.style.backgroundImage = `url(${backgroundUrl})`;
-        }
-      });
-    }, []);
+useEffect(() => {
+  // Background image setup - only run on client side
+  if (typeof window !== "undefined") {
+    const pageSections = document.querySelectorAll(".swiper-slide");
+    pageSections.forEach(slide => {
+      const backgroundUrl = slide.getAttribute("data-background");
+      if (backgroundUrl) {
+        slide.style.backgroundImage = `url(${backgroundUrl})`;
+      }
+    });
+  }
+}, []);
   return (
 
       <header className="slider">

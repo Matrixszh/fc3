@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-register();
 
 import Link from "next/link";
 
@@ -12,47 +10,52 @@ function CarouselHome() {
   
   //  Carousel
   useEffect(() => {
-    const carouselSlider = new Swiper('.carousel-slider', {
-      spaceBetween: 0,
-      slidesPerView: 3,
-      centeredSlides: true,
-      autoplay: {
-        delay: 9500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
-      },
-      loop: true,
-      breakpoints: {
-        1024: {
-          slidesPerView: 3
+    if (typeof window !== "undefined") {
+      // register Swiper custom elements
+      register();
+
+      const carouselSlider = new Swiper('.carousel-slider', {
+        spaceBetween: 0,
+        slidesPerView: 3,
+        centeredSlides: true,
+        autoplay: {
+          delay: 9500,
+          disableOnInteraction: false,
         },
-        768: {
-          slidesPerView: 2
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
-        640: {
-          slidesPerView: 1
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'progressbar',
         },
-        320: {
-          slidesPerView: 1
+        loop: true,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3
+          },
+          768: {
+            slidesPerView: 2
+          },
+          640: {
+            slidesPerView: 1
+          },
+          320: {
+            slidesPerView: 1
+          }
         }
-      }
-    });
-  
-    // Set background images
-    const pageSections = document.querySelectorAll(".swiper-slide");
-    pageSections.forEach(slide => {
-      const backgroundUrl = slide.getAttribute("data-background");
-      if (backgroundUrl) {
-        slide.style.backgroundImage = `url(${backgroundUrl})`;
-      }
-    });
+      });
+
+      // Set background images - only run on client side
+      const pageSections = document.querySelectorAll(".swiper-slide");
+      pageSections.forEach(slide => {
+        const backgroundUrl = slide.getAttribute("data-background");
+        if (backgroundUrl) {
+          slide.style.backgroundImage = `url(${backgroundUrl})`;
+        }
+      });
+    }
   }, []);
   
 

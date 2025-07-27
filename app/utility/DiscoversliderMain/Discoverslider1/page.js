@@ -77,10 +77,12 @@ function noise() {
 
   // Init
   const init = () => {
-    canvas = document.getElementById("noise");
-    ctx = canvas.getContext("2d");
-    setup();
-    reset();
+    if (typeof window !== "undefined") {
+      canvas = document.getElementById("noise");
+      ctx = canvas.getContext("2d");
+      setup();
+      reset();
+    }
   };
 
   init();
@@ -221,7 +223,7 @@ function Page() {
                         src="/assets/images/slider/slide-1.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-1-p-500.jpeg 500w,
                         /assets/images/slider/slide-1-p-800.jpeg 800w,
                         /assets/images/slider/slide-1.jpg        934w
@@ -245,7 +247,7 @@ function Page() {
                         src="/assets/images/slider/slide-2.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-2-p-500.jpeg 500w,
                         /assets/images/slider/slide-2-p-800.jpeg 800w,
                         /assets/images/slider/slide-2.jpg        934w
@@ -269,7 +271,7 @@ function Page() {
                         src="/assets/images/slider/slide-3.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-3-p-500.jpeg 500w,
                         /assets/images/slider/slide-3-p-800.jpeg 800w,
                         /assets/images/slider/slide-3.jpg        934w
@@ -293,7 +295,7 @@ function Page() {
                         src="/assets/images/slider/slide-4.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-4-p-500.jpeg 500w,
                         /assets/images/slider/slide-4-p-800.jpeg 800w,
                         /assets/images/slider/slide-4.jpg        934w
@@ -317,7 +319,7 @@ function Page() {
                         src="/assets/images/slider/slide-5.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-5-p-500.jpeg 500w,
                         /assets/images/slider/slide-5-p-800.jpeg 800w,
                         /assets/images/slider/slide-5.jpg        934w
@@ -341,7 +343,7 @@ function Page() {
                         src="/assets/images/slider/slide-1.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-1-p-500.jpeg 500w,
                         /assets/images/slider/slide-1-p-800.jpeg 800w,
                         /assets/images/slider/slide-1.jpg        934w
@@ -365,7 +367,7 @@ function Page() {
                         src="/assets/images/slider/slide-5.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-5-p-500.jpeg 500w,
                         /assets/images/slider/slide-5-p-800.jpeg 800w,
                         /assets/images/slider/slide-5.jpg        934w
@@ -389,7 +391,7 @@ function Page() {
                         src="/assets/images/slider/slide-2.jpg"
                         loading="lazy"
                         sizes="30vw"
-                        srcset="
+                        srcSet="
                         /assets/images/slider/slide-2-p-500.jpeg 500w,
                         /assets/images/slider/slide-2-p-800.jpeg 800w,
                         /assets/images/slider/slide-2.jpg        934w

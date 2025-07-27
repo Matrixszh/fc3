@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-register();
 
 import Link from "next/link";
 
@@ -12,53 +10,60 @@ function CarouselHome() {
   
   //  Carousel
   useEffect(() => {
-    const carouselSlider = new Swiper('.carousel-slider', {
-      spaceBetween: 0,
-      slidesPerView: 3,
-      centeredSlides: true,
-      autoplay: {
-        delay: 9500,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
-      },
-      loop: true,
-      loopedSlides: 3,
-      breakpoints: {
-        1024: {
-          slidesPerView: 3
-        },
-        768: {
-          slidesPerView: 1
-        },
-        640: {
-          slidesPerView: 1
-        },
-        320: {
-          slidesPerView: 1
-        }
-      }
-    });
+    if (typeof window !== "undefined") {
+      // register Swiper custom elements
+      register();
 
-    
+      const carouselSlider = new Swiper('.carousel-slider', {
+        spaceBetween: 0,
+        slidesPerView: 3,
+        centeredSlides: true,
+        autoplay: {
+          delay: 9500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'progressbar',
+        },
+        loop: true,
+        loopedSlides: 3,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3
+          },
+          768: {
+            slidesPerView: 1
+          },
+          640: {
+            slidesPerView: 1
+          },
+          320: {
+            slidesPerView: 1
+          }
+        }
+      });
+    }
+
+
   }, []); // Empty dependency array ensures useEffect runs only once on mount
 
 //   background img for carousel
 useEffect(() => {
-    // Background image setup
-    const pageSections = document.querySelectorAll(".swiper-slide");
-    pageSections.forEach(slide => {
-      const backgroundUrl = slide.getAttribute("data-background");
-      if (backgroundUrl) {
-        slide.style.backgroundImage = `url(${backgroundUrl})`;
-      }
-    });
+    // Background image setup - only run on client side
+    if (typeof window !== "undefined") {
+      const pageSections = document.querySelectorAll(".swiper-slide");
+      pageSections.forEach(slide => {
+        const backgroundUrl = slide.getAttribute("data-background");
+        if (backgroundUrl) {
+          slide.style.backgroundImage = `url(${backgroundUrl})`;
+        }
+      });
+    }
   }, []);
 
 
