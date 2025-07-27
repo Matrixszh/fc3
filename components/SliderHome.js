@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react'
 import Swiper from "swiper";
 // import function to register Swiper custom elements
