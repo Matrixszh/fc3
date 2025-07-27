@@ -51,14 +51,16 @@ function CarouselHome() {
 
 //   background img for carousel
 useEffect(() => {
-    // Background image setup
-    const pageSections = document.querySelectorAll(".swiper-slide");
-    pageSections.forEach(slide => {
-      const backgroundUrl = slide.getAttribute("data-background");
-      if (backgroundUrl) {
-        slide.style.backgroundImage = `url(${backgroundUrl})`;
-      }
-    });
+    // Background image setup - only run on client side
+    if (typeof window !== "undefined") {
+      const pageSections = document.querySelectorAll(".swiper-slide");
+      pageSections.forEach(slide => {
+        const backgroundUrl = slide.getAttribute("data-background");
+        if (backgroundUrl) {
+          slide.style.backgroundImage = `url(${backgroundUrl})`;
+        }
+      });
+    }
   }, []);
 
 

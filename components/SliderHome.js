@@ -62,16 +62,18 @@ function SliderHome() {
       }, []);
     
       //   background img for slider
-    useEffect(() => {
-      // Background image setup
-      const pageSections = document.querySelectorAll(".swiper-slide");
-      pageSections.forEach(slide => {
-        const backgroundUrl = slide.getAttribute("data-background");
-        if (backgroundUrl) {
-          slide.style.backgroundImage = `url(${backgroundUrl})`;
-        }
-      });
-    }, []);
+useEffect(() => {
+  // Background image setup - only run on client side
+  if (typeof window !== "undefined") {
+    const pageSections = document.querySelectorAll(".swiper-slide");
+    pageSections.forEach(slide => {
+      const backgroundUrl = slide.getAttribute("data-background");
+      if (backgroundUrl) {
+        slide.style.backgroundImage = `url(${backgroundUrl})`;
+      }
+    });
+  }
+}, []);
   return (
 
       <header className="slider">
