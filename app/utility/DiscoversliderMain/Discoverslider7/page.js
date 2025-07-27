@@ -105,25 +105,27 @@ function Page() {
   
     useEffect(() => {
       const toggleClasses = () => {
-        if (isToggled) {
-          document
-            .querySelectorAll(".swiper-nav-btn")
-            .forEach((target) => target.classList.add("show"));
-          document
-            .querySelectorAll(".control-btn")
-            .forEach((target) => target.classList.add("active"));
-        } else {
-          document
-            .querySelectorAll(".swiper-nav-btn")
-            .forEach((target) => target.classList.remove("show"));
-          document
-            .querySelectorAll(".control-btn")
-            .forEach((target) => target.classList.remove("active"));
+        if (typeof window !== "undefined") {
+          if (isToggled) {
+            document
+              .querySelectorAll(".swiper-nav-btn")
+              .forEach((target) => target.classList.add("show"));
+            document
+              .querySelectorAll(".control-btn")
+              .forEach((target) => target.classList.add("active"));
+          } else {
+            document
+              .querySelectorAll(".swiper-nav-btn")
+              .forEach((target) => target.classList.remove("show"));
+            document
+              .querySelectorAll(".control-btn")
+              .forEach((target) => target.classList.remove("active"));
+          }
         }
       };
-  
+
       toggleClasses(); // Initial setup based on initial state
-  
+
       // Cleanup: Remove event listeners on unmount
       return () => {
         // Cleanup code (if needed)
