@@ -77,10 +77,12 @@ function noise() {
 
   // Init
   const init = () => {
-    canvas = document.getElementById("noise");
-    ctx = canvas.getContext("2d");
-    setup();
-    reset();
+    if (typeof window !== "undefined") {
+      canvas = document.getElementById("noise");
+      ctx = canvas.getContext("2d");
+      setup();
+      reset();
+    }
   };
 
   init();
