@@ -80,7 +80,7 @@ const MobileSidebar = ({ collapsed, className }) => {
         )}
         <SidebarLogo collapsed={collapsed} />
         <ScrollArea
-          className={cn("sidebar-menu  h-[calc(100%-80px)] ", {
+          className={cn("sidebar-menu h-[calc(100vh-80px)] max-h-[calc(100vh-80px)] overflow-y-auto", {
             "px-4": !collapsed,
           })}
         >
