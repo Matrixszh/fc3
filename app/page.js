@@ -29,14 +29,18 @@ const MyComponent = () => {
       }
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.body.addEventListener('mouseover', handleMouseOver);
-    document.body.addEventListener('mouseout', handleMouseOut);
+    if (typeof window !== "undefined") {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.body.addEventListener('mouseover', handleMouseOver);
+      document.body.addEventListener('mouseout', handleMouseOut);
+    }
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.body.removeEventListener('mouseover', handleMouseOver);
-      document.body.removeEventListener('mouseout', handleMouseOut);
+      if (typeof window !== "undefined") {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.body.removeEventListener('mouseover', handleMouseOver);
+        document.body.removeEventListener('mouseout', handleMouseOut);
+      }
     };
   }, []);
 
