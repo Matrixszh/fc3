@@ -29,8 +29,8 @@ const ThingsAbleToDo = () => {
         <div className="row justify-content-center">
           <div className="col-12 wow" data-splitting>
             <h3 className="section-title">
-              THE THINGS<br />
-              WE ARE ABLE TO DO
+              FIRE PROTECTION<br />
+              SERVICES WE PROVIDE
             </h3>
           </div>
           {/* end col-12 */}
