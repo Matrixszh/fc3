@@ -170,20 +170,23 @@ function Page() {
   useEffect(() => {
     // Function to add classes to HTML element
     const addClassesToHtml = () => {
-      var n = document.documentElement,
-        t = " w-mod-";
-      n.className += t + "js";
-      ("ontouchstart" in window ||
-        (window.DocumentTouch && document instanceof DocumentTouch)) &&
-        (n.className += t + "touch");
+      if (typeof window !== "undefined") {
+        var n = document.documentElement,
+          t = " w-mod-";
+        n.className += t + "js";
+        ("ontouchstart" in window ||
+          (window.DocumentTouch && document instanceof DocumentTouch)) &&
+          (n.className += t + "touch");
+      }
     };
 
+    if (typeof window !== "undefined") {
       // Set margin bottom to zero
       document.body.style.marginBottom = "0";
 
       // Enable vertical scrolling
       document.body.style.overflowY = "hidden";
-    
+    }
 
     // Call the function when component mounts
     addClassesToHtml();
