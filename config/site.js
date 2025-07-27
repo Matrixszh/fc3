@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Tourog | Creative Agensy for Digital Age",
-  description: "Creative Agensy for Digital Age",
+  name: "Crossfire | Fire Protection Engineering & Consultants",
+  description: "Your Trusted Fire Safety Partner - Providing comprehensive fire safety solutions since 2000",
   theme: "violet",
   layout: "vertical",
   // semi-box, horizontal, vertical
