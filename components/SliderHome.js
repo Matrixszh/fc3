@@ -105,13 +105,13 @@ useEffect(() => {
       <div className="swiper-container gallery-thumbs">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <span>DISCOVER</span> <a href="/DiscoverSlider">DISCOVER CASE</a>
+            <span>FIRE SAFETY</span> <a href="/services">OUR SERVICES</a>
           </div>
           <div className="swiper-slide">
-            <span>EXCLUSION</span> <a href="/DiscoverSlider">DISCOVER CASE</a>
+            <span>PROTECTION</span> <a href="/services">OUR SERVICES</a>
           </div>
           <div className="swiper-slide">
-            <span>EDITIONAL</span> <a href="/DiscoverSlider">DISCOVER CASE</a>
+            <span>ENGINEERING</span> <a href="/services">OUR SERVICES</a>
           </div>
         </div>
         {/* end swiper-wrapper */}
