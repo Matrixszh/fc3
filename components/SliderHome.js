@@ -85,7 +85,21 @@ useEffect(() => {
         <div className="swiper-wrapper">
           <div className="swiper-slide" data-background="/assets/images/slide01.jpg"></div>
           <div className="swiper-slide">
-            <video src="/assets/videos/video01.mp4" muted autoPlay loop></video>
+            <video
+              src="/assets/videos/video01.mp4"
+              muted
+              loop
+              playsInline
+              onLoadedMetadata={(e) => {
+                const playPromise = e.target.play();
+                if (playPromise !== undefined) {
+                  playPromise.catch(() => {
+                    // Auto-play was prevented, video will play when user interacts
+                    console.log('Video autoplay prevented by browser');
+                  });
+                }
+              }}
+            ></video>
           </div>
           <div className="swiper-slide" data-background="/assets/images/slide02.jpg"></div>
         </div>
