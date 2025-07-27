@@ -64,7 +64,7 @@ const MobileSidebar = ({ collapsed, className }) => {
     <>
       <div
         className={cn(
-          "fixed top-0  bg-card h-full w-[248px] z-[9999] ",
+          "fixed top-0 bg-card h-screen w-[248px] z-[9999] overflow-hidden",
           className,
           {
             " -left-[300px] invisible opacity-0  ": !mobileMenu,
