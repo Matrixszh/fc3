@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import Swiper from "swiper";
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
-// register Swiper custom elements
-register();
 
 import Link from "next/link";
 
@@ -13,6 +11,9 @@ function CarouselHome() {
   //  Carousel
   useEffect(() => {
     if (typeof window !== "undefined") {
+      // register Swiper custom elements
+      register();
+
       const carouselSlider = new Swiper('.carousel-slider', {
         spaceBetween: 0,
         slidesPerView: 3,
