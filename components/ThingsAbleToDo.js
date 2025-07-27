@@ -39,12 +39,12 @@ const ThingsAbleToDo = () => {
               <figure>
                 <img src="/assets/images/icon01.png" alt="Image" />
               </figure>
-              <h6>DIGITAL PRODUCTS</h6>
+              <h6>FIRE SAFETY CONSULTING</h6>
               <ul>
-                <li>Digital Branding</li>
-                <li>Web & Mobile Sites</li>
-                <li>User Interface Design</li>
-                <li>Responsive Techs</li>
+                <li>Fire Risk Assessment</li>
+                <li>Code Compliance</li>
+                <li>Safety Planning</li>
+                <li>Emergency Protocols</li>
               </ul>
             </div>
             {/* end content-block */}
@@ -55,12 +55,12 @@ const ThingsAbleToDo = () => {
               <figure>
                 <img src="/assets/images/icon02.png" alt="Image" />
               </figure>
-              <h6>UI-UX DESIGN</h6>
+              <h6>FIRE SUPPRESSION SYSTEMS</h6>
               <ul>
-                <li>Digital Strategy</li>
-                <li>User Experience Design</li>
-                <li>User Interface Design</li>
-                <li>Mobile Sites</li>
+                <li>Sprinkler Systems</li>
+                <li>Fire Alarm Systems</li>
+                <li>Smoke Detection</li>
+                <li>Emergency Lighting</li>
               </ul>
             </div>
             {/* end content-block */}
@@ -71,12 +71,12 @@ const ThingsAbleToDo = () => {
               <figure>
                 <img src="/assets/images/icon03.png" alt="Image" />
               </figure>
-              <h6>WEB DEVELOPMENT</h6>
+              <h6>FIRE PROTECTION ENGINEERING</h6>
               <ul>
-                <li>Custom Platform</li>
-                <li>Back-End Executions</li>
-                <li>Interface Apps</li>
-                <li>Mobile Systems</li>
+                <li>System Design</li>
+                <li>Code Analysis</li>
+                <li>Performance Testing</li>
+                <li>Maintenance Plans</li>
               </ul>
             </div>
             {/* end content-block */}
