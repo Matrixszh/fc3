@@ -75,6 +75,20 @@ useEffect(() => {
         slide.style.backgroundImage = `url(${backgroundUrl})`;
       }
     });
+
+    // Handle video autoplay
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      video.addEventListener('loadedmetadata', () => {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Auto-play was prevented
+            console.log('Video autoplay prevented by browser - will play on user interaction');
+          });
+        }
+      });
+    });
   }
 }, []);
   return (
