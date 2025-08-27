@@ -289,7 +289,7 @@ function Navbar({ children }) {
           <aside className="left-side">
             <div className="logo">
               <a href="/home">
-                <img src="/assets/images/logocf.png" alt="Image" style={{ width: '150px', height: 'auto' }} />
+                <img src="/assets/images/logo2.png" alt="Image" style={{ width: '150px', height: 'auto' }} />
               </a>
             </div>
             {/* end logo */}
