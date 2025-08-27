@@ -83,9 +83,9 @@ function SliderHome() {
       {/* slider*/}
       <div className="swiper-container gallery-top">
         <div className="swiper-wrapper">
-          <div className="swiper-slide" data-background="/assets/images/fc1.jpg"></div>
-          <div className="swiper-slide" data-background="/assets/images/fc3.jpg"></div>
-          <div className="swiper-slide" data-background="/assets/images/fc2.jpg"></div>
+          <div className="swiper-slide" data-background="/assets/images/vs1.jpg"></div>
+          <div className="swiper-slide" data-background="/assets/images/vs2.jpg"></div>
+          <div className="swiper-slide" data-background="/assets/images/vs3.jpg"></div>
         </div>
         {/* end swiper-wrapper */}
         <div className="slide-progress">
@@ -103,13 +103,13 @@ function SliderHome() {
       <div className="swiper-container gallery-thumbs">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <span>DISCOVER</span> <a href="/DiscoverSlider">DISCOVER CASE</a>
+            <a href="/DiscoverSlider">DISCOVER CASE</a>
           </div>
           <div className="swiper-slide">
-            <span>EXCLUSION</span> <a href="/DiscoverSlider">DISCOVER CASE</a>
+            <a href="/DiscoverSlider">DISCOVER CASE</a>
           </div>
           <div className="swiper-slide">
-            <span>EDITIONAL</span> <a href="/DiscoverSlider">DISCOVER CASE</a>
+            <a href="/DiscoverSlider">DISCOVER CASE</a>
           </div>
         </div>
         {/* end swiper-wrapper */}

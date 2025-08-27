@@ -5,13 +5,13 @@
     overflow: hidden;
   }
   
-  .background {
+.background {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url('https://media.istockphoto.com/id/1299765486/photo/fairy-winter-landscape.jpg?s=1024x1024&w=is&k=20&c=SQ12YRFYsysYaPtfKAu7EKp8OtXauiDxAMMoFe7WLCY=') no-repeat center center/cover;
+    width: 200vh;
+    height: 100vh;
+    background: url('/assets/images/vision360.jpg') no-repeat center center/cover;
     transition: transform 0.5s ease-in-out;
-  }
+}
   
   .centered-button {
     position: absolute;
@@ -20,16 +20,22 @@
     transform: translate(-50%, -50%);
   }
   
-  .button-entryPoint {
+.button-entryPoint {
     padding: 15px 30px;
-    color: black;
     font-size: 20px;
     background-color: #fff !important;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-  }
+    background-image: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff, #06ffa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+
   
   .button-entryPoint:hover {
     background-color: #f0f0f0;
