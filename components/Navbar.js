@@ -252,37 +252,7 @@ function Navbar({ children }) {
         {/* end social-media */}
 
         {/* All Cases */}
-        <div
-          className={`all-cases ${isAllCasesActive ? "active" : ""}`}
-          ref={allCasesRef}
-        >
-          <div className="layer"></div>
-          {/* end layer */}
-          <div className="inner">
-            <ul>
-              <li>
-                <a href="#">Darkness</a>
-              </li>
-              <li>
-                <a href="#">Goddess</a>
-              </li>
-              <li>
-                <a href="#">Employee</a>
-              </li>
-              <li>
-                <a href="#">Berry</a>
-              </li>
-              <li>
-                <a href="#">Roosters</a>
-              </li>
-              <li>
-                <a href="#">Primero</a>
-              </li>
-            </ul>
-          </div>
-          {/* end inner */}
-        </div>
-        {/* end all-cases */}
+
 
         <main className="main-left-side">
           {/* Left Side */}
@@ -333,14 +303,7 @@ function Navbar({ children }) {
             {/* end equalizer */}
           </aside>
           {/* end left-side */}
-          <div
-            className="all-cases-link"
-            ref={allCasesLinkRef}
-            onClick={handleAllCasesClick}
-          >
-            <span>ALL CASES</span>
-            <b>+</b>
-          </div>
+
           {/* end all-cases-link */}
           {children}
         </main>
